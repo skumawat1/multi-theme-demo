@@ -1,0 +1,43 @@
+/*
+ * New Brand Theme
+ */
+
+body.theme-new-brand {
+  /* colors */
+  --background-color: #0bde43;
+  --dark-color: #ed0f07;
+  --light-color: #f0f0f0;
+  --link-color: #0070f3;
+  --link-hover-color: #0050b3;
+  --text-color: #c0ed1c;
+
+  /* block-level tokens — cards */
+  --card-bg-color: #f9f9f9;
+  --card-border-color: #d0d0d0;
+  --card-radius: 8px;
+  --card-shadow: 0 4px 16px rgba(0,0,0,.10);
+  --card-shadow-hover: 0 8px 28px rgba(0,0,0,.20);
+
+  /* block-level tokens — hero */
+  --hero-bg-color: #003865;
+  --hero-overlay-color: rgba(0,0,0,0.55);
+  --hero-text-color: #ffffff;
+
+  /* block-level tokens — columns */
+  --columns-divider-color: #d0d0d0;
+  --columns-gap: 24px;
+
+  /* block-level tokens — stats */
+  --stats-accent-color: #e87722;
+  --stats-bg-color: #003865;
+  --stats-border-color: rgba(232,119,34,0.4);
+  --stats-label-color: rgba(255,255,255,0.85);
+  --stats-text-color: #ffffff;
+
+  /* buttons */
+  --button-primary-bg: #e87722;
+  --button-primary-border: #e87722;
+  --button-primary-color: #ffffff;
+  --button-primary-hover-bg: #c45e0e;
+  --button-primary-hover-border: #c45e0e;
+}
