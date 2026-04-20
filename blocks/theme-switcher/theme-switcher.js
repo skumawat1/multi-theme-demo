@@ -1,6 +1,24 @@
 import { loadCSS } from '../../scripts/aem.js';
 
 const STORAGE_KEY = 'selected-theme';
+const THEMES_MANIFEST = `${window.hlx.codeBasePath}/styles/themes/themes-manifest.json`;
+
+/**
+ * Fetches the list of available themes from the themes manifest JSON.
+ * Returns an empty array if the manifest is missing or malformed.
+ *
+ * @returns {Promise<string[]>} array of theme names, e.g. ['forest', 'ocean', 'sunset']
+ */
+async function fetchAvailableThemes() {
+  try {
+    const resp = await fetch(THEMES_MANIFEST);
+    if (!resp.ok) return [];
+    const data = await resp.json();
+    return Array.isArray(data) ? data.filter((t) => typeof t === 'string' && t.trim()) : [];
+  } catch {
+    return [];
+  }
+}
 
 /**
  * Applies a theme by:
@@ -57,21 +75,17 @@ function getActiveTheme() {
 /**
  * Decorates the Theme Switcher block.
  *
- * DA authoring format:
- *   | Theme Switcher |
- *   | ocean          |
- *   | forest         |
- *   | sunset         |
+ * Theme options are driven entirely by the themes manifest file at:
+ *   styles/themes/themes-manifest.json
  *
- * Each data row provides one theme name (without the 'theme-' prefix).
+ * Adding a theme:  create the CSS file + add its name to the manifest.
+ * Removing a theme: delete the CSS file + remove its name from the manifest.
  *
  * @param {HTMLElement} block - the block element
  */
-export default function decorate(block) {
-  // Collect theme names from authored rows
-  const themes = [...block.querySelectorAll(':scope > div > div')]
-    .map((cell) => cell.textContent.trim().toLowerCase())
-    .filter(Boolean);
+export default async function decorate(block) {
+  // Fetch available themes from the manifest
+  const themes = await fetchAvailableThemes();
 
   // Build the switcher UI
   const nav = document.createElement('div');

@@ -7,10 +7,21 @@
   position: relative;
   padding: 80px 24px;
   min-height: 360px;
-  background-color: var(--hero-bg-color, var(--dark-color, #1a1a1a));
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* Theme background color — visible when no image is present */
+  background-color: var(--hero-bg-color, var(--dark-color, #1a1a1a));
+}
+
+/* Themed overlay on top of background image */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--hero-overlay-color, rgba(0, 0, 0, 0.5));
+  pointer-events: none;
 }
 
 .hero h1,
@@ -21,46 +32,46 @@
   margin-right: auto;
   color: var(--hero-text-color, #ffffff);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 2;
 }
 
-.hero p {
+/* hero text paragraphs that are NOT picture wrappers */
+.hero p:not(:has(picture)) {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   color: var(--hero-text-color, #ffffff);
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.hero .button-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* The <p> that wraps <picture> must fill the hero */
+.hero p:has(picture) {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  line-height: 0;
 }
 
 .hero picture {
   position: absolute;
-  z-index: 0;
   inset: 0;
-  object-fit: cover;
   box-sizing: border-box;
-}
-
-/* themed overlay on top of background image */
-.hero picture::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--hero-overlay-color, rgba(0, 0, 0, 0.5));
 }
 
 .hero img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-}
-
-/* ensure text sits above picture */
-.hero h1,
-.hero h2,
-.hero h3,
-.hero p,
-.hero .button-wrapper {
-  position: relative;
-  z-index: 1;
 }
 
 @media (width >= 900px) {
