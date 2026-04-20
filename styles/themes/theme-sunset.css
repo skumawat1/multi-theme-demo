@@ -4,31 +4,40 @@
 
 body.theme-sunset {
   /* colors */
-  --background-color: #fff8f0;
-  --light-color: #fde8d0;
-  --dark-color: #6a1a00;
+  --background-color: #ffd6a5;
+  --light-color: #ffb347;
+  --dark-color: #c1440e;
   --text-color: #2d1b0e;
-  --link-color: #e85d04;
-  --link-hover-color: #9c2c0a;
+  --link-color: #ff6b00;
+  --link-hover-color: #c1440e;
 
   /* block-level tokens — cards */
-  --card-border-color: #f4a261;
-  --card-bg-color: #ffffff;
+  --card-border-color: #ff6b00;
+  --card-bg-color: #fff0d9;
   --card-radius: 4px;
-  --card-shadow: 0 4px 12px rgba(232, 93, 4, 0.15);
+  --card-shadow: 0 4px 16px rgba(255, 107, 0, 0.25);
+  --card-shadow-hover: 0 8px 28px rgba(255, 107, 0, 0.45);
 
   /* block-level tokens — hero */
   --hero-text-color: #ffffff;
-  --hero-overlay-color: rgba(106, 26, 0, 0.5);
+  --hero-bg-color: #c1440e;
+  --hero-overlay-color: rgba(100, 20, 0, 0.65);
 
   /* block-level tokens — columns */
-  --columns-divider-color: #f4a261;
+  --columns-divider-color: #ff6b00;
   --columns-gap: 24px;
 
+  /* block-level tokens — stats */
+  --stats-bg-color: #6a1a00;
+  --stats-accent-color: #ffb347;
+  --stats-text-color: #ffffff;
+  --stats-label-color: rgba(255, 255, 255, 0.85);
+  --stats-border-color: rgba(255, 179, 71, 0.4);
+
   /* buttons */
-  --button-primary-bg: #e85d04;
-  --button-primary-border: #e85d04;
+  --button-primary-bg: #ff6b00;
+  --button-primary-border: #ff6b00;
   --button-primary-color: #ffffff;
-  --button-primary-hover-bg: #9c2c0a;
-  --button-primary-hover-border: #9c2c0a;
+  --button-primary-hover-bg: #c1440e;
+  --button-primary-hover-border: #c1440e;
 }

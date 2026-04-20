@@ -5,8 +5,12 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  padding: 80px 24px;
+  min-height: 360px;
+  background-color: var(--hero-bg-color, var(--dark-color, #1a1a1a));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero h1,
@@ -15,19 +19,21 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--hero-text-color, var(--background-color));
+  color: var(--hero-text-color, #ffffff);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero p {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--hero-text-color, var(--background-color));
+  color: var(--hero-text-color, #ffffff);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero picture {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   inset: 0;
   object-fit: cover;
   box-sizing: border-box;
@@ -38,7 +44,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-color: var(--hero-overlay-color, transparent);
+  background-color: var(--hero-overlay-color, rgba(0, 0, 0, 0.5));
 }
 
 .hero img {
@@ -47,8 +53,18 @@
   height: 100%;
 }
 
+/* ensure text sits above picture */
+.hero h1,
+.hero h2,
+.hero h3,
+.hero p,
+.hero .button-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    padding: 100px 32px;
   }
 }

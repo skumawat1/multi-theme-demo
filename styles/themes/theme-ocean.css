@@ -4,31 +4,40 @@
 
 body.theme-ocean {
   /* colors */
-  --background-color: #e8f4f8;
-  --light-color: #caf0f8;
-  --dark-color: #03045e;
-  --text-color: #1a2e3a;
-  --link-color: #0077b6;
-  --link-hover-color: #023e8a;
+  --background-color: #b8e8f8;
+  --light-color: #7dd6f5;
+  --dark-color: #0077b6;
+  --text-color: #02344f;
+  --link-color: #00b4d8;
+  --link-hover-color: #0077b6;
 
   /* block-level tokens — cards */
-  --card-border-color: #90e0ef;
-  --card-bg-color: #ffffff;
+  --card-border-color: #00b4d8;
+  --card-bg-color: #e8f8fd;
   --card-radius: 12px;
-  --card-shadow: 0 4px 12px rgba(0, 119, 182, 0.15);
+  --card-shadow: 0 4px 16px rgba(0, 180, 216, 0.25);
+  --card-shadow-hover: 0 8px 28px rgba(0, 180, 216, 0.45);
 
   /* block-level tokens — hero */
   --hero-text-color: #ffffff;
-  --hero-overlay-color: rgba(0, 77, 113, 0.45);
+  --hero-bg-color: #0077b6;
+  --hero-overlay-color: rgba(0, 50, 90, 0.65);
 
   /* block-level tokens — columns */
-  --columns-divider-color: #90e0ef;
+  --columns-divider-color: #00b4d8;
   --columns-gap: 32px;
 
+  /* block-level tokens — stats */
+  --stats-bg-color: #023e8a;
+  --stats-accent-color: #48cae4;
+  --stats-text-color: #ffffff;
+  --stats-label-color: rgba(255, 255, 255, 0.85);
+  --stats-border-color: rgba(72, 202, 228, 0.4);
+
   /* buttons */
-  --button-primary-bg: #0077b6;
-  --button-primary-border: #0077b6;
+  --button-primary-bg: #0096c7;
+  --button-primary-border: #0096c7;
   --button-primary-color: #ffffff;
-  --button-primary-hover-bg: #023e8a;
-  --button-primary-hover-border: #023e8a;
+  --button-primary-hover-bg: #0077b6;
+  --button-primary-hover-border: #0077b6;
 }

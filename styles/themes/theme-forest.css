@@ -4,31 +4,40 @@
 
 body.theme-forest {
   /* colors */
-  --background-color: #f0f7f0;
-  --light-color: #d8f3dc;
-  --dark-color: #081c15;
-  --text-color: #1a2e1a;
-  --link-color: #2d6a4f;
-  --link-hover-color: #1b4332;
+  --background-color: #b7e4c7;
+  --light-color: #74c69d;
+  --dark-color: #1b4332;
+  --text-color: #081c15;
+  --link-color: #52b788;
+  --link-hover-color: #2d6a4f;
 
   /* block-level tokens — cards */
-  --card-border-color: #95d5b2;
-  --card-bg-color: #ffffff;
+  --card-border-color: #52b788;
+  --card-bg-color: #d8f3dc;
   --card-radius: 8px;
-  --card-shadow: 0 4px 12px rgba(45, 106, 79, 0.15);
+  --card-shadow: 0 4px 16px rgba(45, 106, 79, 0.25);
+  --card-shadow-hover: 0 8px 28px rgba(45, 106, 79, 0.45);
 
   /* block-level tokens — hero */
   --hero-text-color: #ffffff;
-  --hero-overlay-color: rgba(8, 28, 21, 0.5);
+  --hero-bg-color: #1b4332;
+  --hero-overlay-color: rgba(8, 28, 21, 0.65);
 
   /* block-level tokens — columns */
-  --columns-divider-color: #95d5b2;
+  --columns-divider-color: #52b788;
   --columns-gap: 28px;
 
+  /* block-level tokens — stats */
+  --stats-bg-color: #081c15;
+  --stats-accent-color: #95d5b2;
+  --stats-text-color: #ffffff;
+  --stats-label-color: rgba(255, 255, 255, 0.85);
+  --stats-border-color: rgba(149, 213, 178, 0.4);
+
   /* buttons */
-  --button-primary-bg: #2d6a4f;
-  --button-primary-border: #2d6a4f;
+  --button-primary-bg: #52b788;
+  --button-primary-border: #52b788;
   --button-primary-color: #ffffff;
-  --button-primary-hover-bg: #1b4332;
-  --button-primary-hover-border: #1b4332;
+  --button-primary-hover-bg: #2d6a4f;
+  --button-primary-hover-border: #2d6a4f;
 }

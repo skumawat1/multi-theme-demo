@@ -1,0 +1,101 @@
+/* Stats Block
+ * A full-width metrics/highlights band that changes dramatically per theme.
+ * Uses theme tokens: --stats-bg-color, --stats-accent-color,
+ *                    --stats-text-color, --stats-label-color, --stats-border-color
+ */
+
+.stats-container .stats-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.stats {
+  background-color: var(--stats-bg-color, #1a1a2e);
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.stats-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 32px 24px;
+  border-right: 1px solid var(--stats-border-color, rgba(255, 255, 255, 0.15));
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.stats-item:last-child {
+  border-right: none;
+}
+
+.stats-item:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  transform: translateY(-4px);
+}
+
+.stats-value {
+  display: block;
+  font-family: var(--heading-font-family, sans-serif);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--stats-accent-color, #60a5fa);
+  letter-spacing: -0.02em;
+}
+
+.stats-label {
+  display: block;
+  font-size: var(--body-font-size-s, 16px);
+  font-weight: 500;
+  color: var(--stats-label-color, rgba(255, 255, 255, 0.8));
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Accent underline beneath value */
+.stats-value::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: var(--stats-accent-color, #60a5fa);
+  margin: 8px auto 0;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+@media (width < 600px) {
+  .stats-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .stats-item {
+    border-bottom: 1px solid var(--stats-border-color, rgba(255, 255, 255, 0.15));
+  }
+
+  .stats-item:nth-last-child(-n+2):not(.stats-item ~ .stats-item:nth-last-child(-n+1)) {
+    border-bottom: none;
+  }
+}
+
+@media (width >= 900px) {
+  .stats {
+    padding: 80px 32px;
+  }
+}
