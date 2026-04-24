@@ -1,0 +1,43 @@
+/*
+ * Theme Midnight Ocean Theme
+ */
+
+body.theme-theme-midnight-ocean {
+  /* colors */
+  --background-color: #0a0e1a;
+  --dark-color: #c8d6e5;
+  --light-color: #1a2035;
+  --link-color: #4fc3f7;
+  --link-hover-color: #81d4fa;
+  --text-color: #e8edf5;
+
+  /* block-level tokens — cards */
+  --card-bg-color: #111827;
+  --card-border-color: #1e3a5f;
+  --card-radius: 12px;
+  --card-shadow: 0 4px 20px rgba(0,120,200,0.15);
+  --card-shadow-hover: 0 8px 36px rgba(0,150,255,0.30);
+
+  /* block-level tokens — hero */
+  --hero-bg-color: #050d1a;
+  --hero-overlay-color: rgba(0,20,60,0.65);
+  --hero-text-color: #ffffff;
+
+  /* block-level tokens — columns */
+  --columns-divider-color: #1e3a5f;
+  --columns-gap: 28px;
+
+  /* block-level tokens — stats */
+  --stats-accent-color: #4fc3f7;
+  --stats-bg-color: #050d1a;
+  --stats-border-color: rgba(79,195,247,0.35);
+  --stats-label-color: rgba(200,220,255,0.80);
+  --stats-text-color: #ffffff;
+
+  /* buttons */
+  --button-primary-bg: #0077b6;
+  --button-primary-border: #0077b6;
+  --button-primary-color: #ffffff;
+  --button-primary-hover-bg: #023e8a;
+  --button-primary-hover-border: #023e8a;
+}
