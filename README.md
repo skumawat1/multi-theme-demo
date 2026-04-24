@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+- Preview: https://main--multi-theme-demo--skumawat1.aem.page/
+- Live: https://main--theme-demo--skumawat1.aem.live/
 
 ## Documentation
 
