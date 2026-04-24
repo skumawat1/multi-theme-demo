@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--multi-theme-demo--skumawat1.aem.page/
-- Live: https://main--theme-demo--skumawat1.aem.live/
+- Preview: [https://main--multi-theme-demo--skumawat1.aem.page/](https://main--multi-theme-demo--skumawat1.aem.page/en/theme-demo)
+- Live: [https://main--multi-theme-demo--skumawat1.aem.live/](https://main--multi-theme-demo--skumawat1.aem.live/en/theme-demo)
 
 ## Documentation
 
